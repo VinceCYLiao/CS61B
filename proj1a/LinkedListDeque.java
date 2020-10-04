@@ -40,12 +40,13 @@ public class LinkedListDeque<Type> {
 
     }
 
-    public void isEmpty() {
+    public boolean isEmpty() {
         if (sentinel.next == sentinel && sentinel.prev == sentinel) {
             System.out.println("Is Empty");
-//            return;
+            return true;
         } else {
             System.out.println("Not Empty");
+            return false;
 
         }
     }
@@ -70,6 +71,7 @@ public class LinkedListDeque<Type> {
         Node<Type> firstNode = sentinel.next;
         sentinel.next = firstNode.next;
         firstNode.next.prev = sentinel;
+        size -= 1;
         return firstNode == sentinel ? null : (Type) firstNode;
     }
 
@@ -77,6 +79,7 @@ public class LinkedListDeque<Type> {
         Node lastNode = sentinel.prev;
         sentinel.prev = lastNode.prev;
         lastNode.prev.next = sentinel;
+        size -= 1;
         return lastNode == sentinel ? null : (Type) lastNode;
     }
 
