@@ -133,7 +133,15 @@ public class LinkedListDeque<Type> {
         L.printDeque(); // 2,3,4,5,6
         System.out.println(L.get(4));
         System.out.println(L.getRecursive(4));
-
+//        Object[] numbers = new Object[]{ "1", "2", 2.31313123};
+//        System.out.println(numbers[2] + " " + numbers[1]);
+        int[] x = {9, 10, 11, 12, 13};
+        int[] y = new int[2];
+        int i = 0;
+        while (i < x.length) {
+            y[i] = x[i];
+            i += 1;
+        }
 
 //        System.out.println(L.sentinel.next.item); //1
 //        System.out.println(L.sentinel.next.next.item); //2
